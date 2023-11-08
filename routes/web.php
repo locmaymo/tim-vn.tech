@@ -18,8 +18,8 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 */
 
 Route::get('/', function () {
-    return view('homepage');
-})->name('homepage');
+    return view('welcome');
+});
 
 
 Route::get('/register/tim', [UserController::class, 'createTim'])->name('create.tim');
