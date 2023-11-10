@@ -1,0 +1,25 @@
+.email-container {
+    background-color: #d22d2d;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.email-heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.email-content {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.email-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0077cc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}

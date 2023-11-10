@@ -16,6 +16,12 @@
                             <p>Nếu bạn muốn tiếp tục sử dụng dịch vụ của chúng tôi, vui lòng thanh toán để trở thành thành viên.</p>
                             <p>Chúng tôi sẽ gửi mail cho bạn để thông báo trước 1 ngày về việc kết thúc thời gian dùng thử.</p>
                         </div>
+                        <div class="card-footer">
+                            <form action="{{url('/vnpay_payment')}}" method="post">
+                                @csrf
+                                <button type="submit" name="redirect" class="btn btn-primary">Thanh Toán</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
                 <div class="container mt-5">
