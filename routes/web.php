@@ -2,7 +2,11 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\PostJobController;
+use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\UserController;
+use App\Http\Middleware\isEmployer;
+use App\Http\Middleware\isPremiumUser;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
@@ -48,4 +52,13 @@ Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $requ
 
 Route::get('/resend/verification/email', [DashboardController::class, 'resend'])->name('resend.email');
 
-Route::post('/vnpay_payment', [PaymentController::class,'vnpay_payment']);
+Route::post('/vnpay/payment', [PaymentController::class,'vnpay_payment'])->name('payment');
+Route::get('/vnpay/return', [PaymentController::class,'vnpay_return'])->name('return');
+
+Route::get('/subscribe', [SubscriptionController::class, 'subscribe'])->name('subscribe');
+
+Route::post('pay/monthly', [SubscriptionController::class, 'pay'])->name('pay.monthly');
+Route::post('pay/yearly', [SubscriptionController::class, 'pay'])->name('pay.yearly');
+Route::get('payment/success', [SubscriptionController::class, 'paymentSuccess'])->name('payment.success');
+
+Route::get('job/create', [PostJobController::class, 'create'])->name('job.create')->middleware(isPremiumUser::class);
