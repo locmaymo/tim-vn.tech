@@ -35,7 +35,7 @@ class UserController extends Controller
 
         $user->sendEmailVerificationNotification();
 
-        return redirect()->route('login')->with('success', 'Vui lòng xác minh email để đăng nhập');
+        return redirect()->route('login')->with('success', 'Đăng ký thành công');
     }
 
 //    hàm này để hiển thị form đăng ký cho nhà tuyển dụng
@@ -60,7 +60,7 @@ class UserController extends Controller
 
         $user->sendEmailVerificationNotification();
 
-        return redirect()->route('login')->with('success', 'Vui lòng xác minh email để đăng nhập');
+        return redirect()->route('login')->with('success', 'Đăng ký thành công');
     }
 
 //    hàm xử lý đăng nhập
