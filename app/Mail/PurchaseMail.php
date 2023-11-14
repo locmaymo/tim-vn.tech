@@ -18,18 +18,15 @@ class PurchaseMail extends Mailable implements ShouldQueue
      */
     public $plan;
     public $billingEnds;
-    public $amount;
-    public function __construct($plan, $billingEnds, $amount)
+    public function __construct($plan, $billingEnds)
     {
         $this->plan = $plan;
         $this->billingEnds = $billingEnds;
-        $this->amount = $amount;
     }
 
     /**
      * Get the message envelope.
      */
-//    hàm này để gửi mail
     public function envelope(): Envelope
     {
         return new Envelope(

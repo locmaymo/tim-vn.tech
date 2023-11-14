@@ -52,6 +52,6 @@ class PostJobController extends Controller
         Listing::find($id)->delete();
         return back()->with('success', 'Đã Xóa Thành Công!');
     }
-//    public function show($id)
+
 
 }

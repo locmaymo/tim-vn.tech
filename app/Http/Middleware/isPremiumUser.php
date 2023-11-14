@@ -8,7 +8,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 class isPremiumUser
 {
-//    hàm này để kiểm tra xem user có phải là premium user hay không
     /**
      * Handle an incoming request.
      *

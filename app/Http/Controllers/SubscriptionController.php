@@ -147,13 +147,13 @@ class SubscriptionController extends Controller
         ]);
 
         try {
-            Mail::to(auth()->user())->queue(new PurchaseMail($plan,$billingEnds));
+            Mail::to(auth()->user())->queue(new PurchaseMail($plan, $billingEnds));
 
         }catch (\Exception $e) {
             return response()->json($e);
         }
 
-//        redirect to dashboard
+
         return redirect()->route('dashboard')->with('success','Thanh toán thành công tài khoản của bạn đã được nâng cấp');
     }
 }

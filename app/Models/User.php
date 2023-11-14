@@ -17,7 +17,6 @@ class User extends Authenticatable implements MustVerifyEmail
      *
      * @var array<int, string>
      */
-//    hàm này để tạo quan hệ 1-n với bảng listing
     protected $fillable = [
         'name',
         'email',
@@ -52,4 +51,5 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
 }

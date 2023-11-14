@@ -8,7 +8,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 class notAllowPayment
 {
-//    hàm này để không cho user thanh toán lần 2
     /**
      * Handle an incoming request.
      *

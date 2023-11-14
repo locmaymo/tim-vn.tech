@@ -8,7 +8,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 class isEmployer
 {
-//    hàm này để kiểm tra xem user có phải là employer hay không
     /**
      * Handle an incoming request.
      *
