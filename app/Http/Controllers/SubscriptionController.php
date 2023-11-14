@@ -153,7 +153,7 @@ class SubscriptionController extends Controller
             return response()->json($e);
         }
 
-
+//        redirect to dashboard
         return redirect()->route('dashboard')->with('success','Thanh toán thành công tài khoản của bạn đã được nâng cấp');
     }
 }

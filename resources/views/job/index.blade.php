@@ -34,7 +34,7 @@
 
     <link href="{{asset('css/bootstrap-datepicker.min.css')}}" rel="stylesheet">
 
-
+{{----}}
 </head>
 
 <body id="page-top">

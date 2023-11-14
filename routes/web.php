@@ -52,7 +52,7 @@ Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $requ
 Route::get('/resend/verification/email', [DashboardController::class, 'resend'])->name('resend.email');
 
 
-
+//
 Route::get('/subscribe', [SubscriptionController::class, 'subscribe'])->name('subscribe');
 
 Route::post('pay/monthly', [SubscriptionController::class, 'pay'])->name('pay.monthly');

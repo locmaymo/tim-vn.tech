@@ -3,7 +3,7 @@
         <div class="col-md-2 mb-4">
             <a href="{{route('job.index')}}" class="btn btn-primary">Quay lại</a>
         </div>
-
+{{----}}
         <div class="col-md-10">
             <div class="row justify-content-start">
                 <div class="col-md-10">

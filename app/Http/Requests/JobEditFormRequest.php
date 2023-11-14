@@ -19,6 +19,7 @@ class JobEditFormRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
+//    hàm này để kiểm tra các trường trong form
     public function rules(): array
     {
         return [

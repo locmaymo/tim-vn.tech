@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-8">
-
+{{----}}
             <h1>Đăng Bài</h1>
             @if(Session::has('message'))
                 <div class="alert alert-success">{{Session::get('message')}}</div>

@@ -11,3 +11,4 @@ Truy cập bảng điều khiển
 Trân trọng,<br>
 {{ config('app.name') }}
 </x-mail::message>
+{{----}}

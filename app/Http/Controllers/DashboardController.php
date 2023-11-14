@@ -11,7 +11,7 @@ class DashboardController extends Controller
     {
         $this->middleware(['auth']);
     }
-
+//    hàm này để hiển thị trang dashboard
     public function index()
     {
             return view('dashboard');

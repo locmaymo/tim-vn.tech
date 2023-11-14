@@ -14,6 +14,7 @@ class JobPost{
         $this->listing = $listing;
     }
 
+//    hàm này để lấy đường dẫn của ảnh
     public function getImagePath(Request $data)
     {
         return $data->file('feature_image')->store('images', 'public');

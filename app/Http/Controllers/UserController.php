@@ -77,7 +77,7 @@ class UserController extends Controller
         }
         return 'Sai email hoặc mật khẩu';
     }
-//    hàm xử lý đăng xuất
+//    hàm xử lý đăng xuất tài khoản
     public function logout()
     {
         Auth::logout();

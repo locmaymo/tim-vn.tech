@@ -120,7 +120,7 @@
 
 <script src="{{asset('js/bootstrap-datepicker.min.js')}}"></script>
 
-
+{{----}}
 <script>
     $(document).ready(function () {
         $('#summernote').summernote();

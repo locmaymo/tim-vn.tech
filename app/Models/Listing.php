@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Listing extends Model
 {
     use HasFactory;
+//    hàm này để tạo quan hệ 1-n với bảng user
 
     protected $fillable = [
         'user_id',

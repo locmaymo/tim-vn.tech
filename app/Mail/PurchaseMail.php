@@ -29,6 +29,7 @@ class PurchaseMail extends Mailable implements ShouldQueue
     /**
      * Get the message envelope.
      */
+//    hàm này để gửi mail
     public function envelope(): Envelope
     {
         return new Envelope(
