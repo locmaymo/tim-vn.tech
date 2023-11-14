@@ -1,9 +1,13 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PostJobController;
+use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\UserController;
+use App\Http\Middleware\isPremiumUser;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
+
 
 
 /*
@@ -46,3 +50,18 @@ Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $requ
 })->middleware(['auth', 'signed'])->name('verification.verify');
 
 Route::get('/resend/verification/email', [DashboardController::class, 'resend'])->name('resend.email');
+
+
+
+Route::get('/subscribe', [SubscriptionController::class, 'subscribe'])->name('subscribe');
+
+Route::post('pay/monthly', [SubscriptionController::class, 'pay'])->name('pay.monthly');
+Route::post('pay/yearly', [SubscriptionController::class, 'pay'])->name('pay.yearly');
+Route::get('payment/success', [SubscriptionController::class, 'paymentSuccess'])->name('payment.success');
+
+Route::get('job/create', [PostJobController::class, 'create'])->name('job.create');
+Route::post('job/store', [PostJobController::class, 'store'])->name('job.store');
+Route::get('job/{listing}/edit', [PostJobController::class, 'edit'])->name('job.edit');
+Route::put('job/{listing}/update', [PostJobController::class, 'update'])->name('job.update');
+Route::get('job', [PostJobController::class, 'index'])->name('job.index');
+Route::get('job/{id}/delete', [PostJobController::class, 'destroy'])->name('job.delete');
