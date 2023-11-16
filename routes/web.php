@@ -26,6 +26,7 @@ Route::get('/', function () {
 })->name('homepage');
 
 
+Route::get('/register', [UserController::class, 'register'])->name('register');
 Route::get('/register/tim', [UserController::class, 'createTim'])->name('create.tim');
 Route::post('/register/tim', [UserController::class, 'storeTim'])->name('store.tim');
 
@@ -37,6 +38,10 @@ Route::post('/login',[UserController::class, 'postLogin'])->name('login.post');
 
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
+Route::get('user/profile', [UserController::class, 'profile'])->name('user.profile')->middleware(['auth', 'verified']);
+Route::post('user/profile', [UserController::class, 'updateProfile'])->name('user.profile.update')->middleware(['auth', 'verified']);
+Route::post('user/profile/password', [UserController::class, 'updatePassword'])->name('user.profile.password')->middleware(['auth', 'verified']);
+
 Route::get('/dashboard', [DashboardController::class, 'index'])
     ->middleware(['verified'])
     ->name('dashboard');
@@ -46,7 +51,7 @@ Route::get('/verify', [DashboardController::class, 'verify'])->name('verificatio
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
 
-    return redirect('/login');
+    return redirect('user/profile');
 })->middleware(['auth', 'signed'])->name('verification.verify');
 
 Route::get('/resend/verification/email', [DashboardController::class, 'resend'])->name('resend.email');
@@ -65,3 +70,7 @@ Route::get('job/{listing}/edit', [PostJobController::class, 'edit'])->name('job.
 Route::put('job/{listing}/update', [PostJobController::class, 'update'])->name('job.update');
 Route::get('job', [PostJobController::class, 'index'])->name('job.index');
 Route::get('job/{id}/delete', [PostJobController::class, 'destroy'])->name('job.delete');
+
+Route::get('user/cv', [UserController::class, 'cv'])->name('user.cv');
+Route::post('user/cv', [UserController::class, 'updateCv'])->name('user.cv.update');
+Route::get('user/cv/view', [UserController::class, 'viewCv'])->name('user.cv.view');

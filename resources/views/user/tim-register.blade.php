@@ -38,7 +38,17 @@
                                 <p class="text-danger">{{$errors->first('password')}}</p>
                             @else<br>
                             @endif
-                            <div class="form-group">
+{{--                            <div class="form-group">--}}
+{{--                                <label for="password">Nhập Lại Mật khẩu</label>--}}
+{{--                                <input type="password" name="password" id="re_password" class="form-control" placeholder="Nhập lại mật khẩu">--}}
+{{--                            </div>--}}
+{{--                            @if($errors->has('name'))--}}
+{{--                                <p class="text-danger">{{$errors->first('password')}}</p>--}}
+{{--                            @else--}}
+{{--                            @endif--}}
+                            <input class="mt-2" type="checkbox" onclick="show()"> Hiển thị
+
+                            <div class="form-group mt-4">
                                 <button type="submit" class="btn btn-primary">Đăng ký</button>
                             </div>
 
@@ -49,4 +59,20 @@
 
        </div>
    </div>
+<script>
+    function show() {
+        var x = document.getElementById("password");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+        var y = document.getElementById("re_password");
+        if (y.type === "password") {
+            y.type = "text";
+        } else {
+            y.type = "password";
+        }
+    }
+</script>
 @endsection

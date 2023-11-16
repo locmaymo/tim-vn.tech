@@ -19,6 +19,12 @@
                             @if($errors->has('feature_image'))
                                 <div class="error"> {{$errors->first('feature_image')}}  </div>
                             @endif
+{{--                            lấy ảnh bìa từ model Listing nếu có ở trong public/storage--}}
+                            @if($listing->feature_image)
+                                <div class="img-fluid mt-4">
+                                    <img src="{{asset('storage/'.$listing->feature_image)}}" height="300" alt="">
+                                </div>
+                            @endif
                         </div>
                         <div class="form-group">
                             <label for="title">Tiêu đề</label>

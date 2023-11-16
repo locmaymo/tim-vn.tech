@@ -169,14 +169,19 @@
         <li class="nav-item dropdown no-arrow">
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{auth()->user()->name}}</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 medium">{{auth()->user()->name}}</span>
+                @if(auth()->user()->profile_pic)
+                <img class="img-profile rounded-circle"
+                     src="{{asset('storage/'.auth()->user()->profile_pic)}}">
+                @else
                 <img class="img-profile rounded-circle"
                      src="{{asset('img/undraw_profile.svg')}}">
+                @endif
             </a>
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                  aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="{{route('user.profile')}}">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     Cá Nhân
                 </a>
@@ -184,10 +189,12 @@
                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                     Bảng điều khiển
                 </a>
-                <a class="dropdown-item" href="#">
+                @if(auth()->user()->user_type === 'employer')
+                <a class="dropdown-item" href="{{route('subscribe')}}">
                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                     Gói đăng ký
                 </a>
+                @endif
                 <div class="dropdown-divider"></div>
                 <form id="form-logout" action="{{route('logout')}}" method="post">@csrf
                 <button id="logout" type="submit" class="dropdown-item">

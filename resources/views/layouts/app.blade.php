@@ -33,22 +33,48 @@
                 </li>
                 @if(!Auth::check())
                     <li class="nav-item mx-lg-2 my-2 my-lg-0">
-                        <button type="button" class="btn btn-danger ">
-                            <a href="{{route('create.tim')}}" style="color: white; text-decoration: none;">Đăng Ký</a>
-                        </button>
+                        <a href="{{route('register')}}" class="btn btn-danger">Đăng Ký</a>
                     </li>
                     <li class="nav-item mx-lg-2 my-2 my-lg-0">
-                        <button type="button" class="btn btn-outline-primary">
-                            <a href="{{route('login')}}" style="color: darkblue; text-decoration: none">Đăng Nhập</a>
-                        </button>
+                        <a href="{{route('login')}}" class="btn btn-primary">Đăng Nhập</a>
                     </li>
                 @endif
                 @if(Auth::check())
                     <li class="nav-item mx-lg-2 my-2 my-lg-0">
-                        <button id="logout" type="button" class="btn btn-outline-primary">Đăng Xuất</button>
+                        <div class="dropdown">
+                            @if(auth()->user()->profile_pic)
+                            <img type="button" data-bs-toggle="dropdown" aria-expanded="false" class="rounded-circle border border-primary" src="{{asset('storage/'.auth()->user()->profile_pic)}}" height="45" alt="">
+                            @else
+                                <img type="button" data-bs-toggle="dropdown" aria-expanded="false" class="rounded-circle border border-primary" src="{{asset('img/undraw_profile.svg')}}" height="45" alt="">
+                            @endif
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item" href="{{route('user.profile')}}">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Cá Nhân
+                                </a>
+                                <a class="dropdown-item" href="{{route('dashboard')}}">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Bảng điều khiển
+                                </a>
+                                @if(auth()->user()->user_type === 'employer')
+                                    <a class="dropdown-item" href="{{route('subscribe')}}">
+                                        <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Gói đăng ký
+                                    </a>
+                                @endif
+                                <div class="dropdown-divider"></div>
+                                <form id="form-logout" action="{{route('logout')}}" method="post">@csrf
+                                    <button id="logout" type="submit" class="dropdown-item">
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Đăng Xuất
+                                    </button>
+                                    </a>
+                                </form>
+                            </ul>
+                        </div>
                     </li>
                 @endif
-                <form id="form-logout" action="{{route('logout')}}" method="post">@csrf</form>
+
             </ul>
         </div>
     </div>

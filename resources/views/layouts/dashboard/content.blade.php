@@ -10,19 +10,14 @@
 {{--    my code--}}
 
     <div class="row justify-content-center">
-        Hello,  {{auth()->user()->name}}
-        @if(auth()->user()->user_trial == null && auth()->user()->billing_ends > now())
-            <p>. Gói thành viên của bạn sẽ hết hạn vào {{auth()->user()->billing_ends}}</p>
-        @endif
         @if(auth()->user()->user_trial != null && auth()->user()->user_trial > now())
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">Thông Báo</div>
+            <div class="col-md mb-4">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">Thông Báo</div>
                     <div class="card-body">
                         <p>Hạn đăng ký dùng thử của bạn tới ngày {{auth()->user()->user_trial}}.</p>
-                        <p>Bạn còn  ngày để sử dụng toàn bộ dịch vụ của chúng tôi.</p>
                         <p>Nếu bạn muốn tiếp tục sử dụng dịch vụ toàn bộ của chúng tôi, vui lòng đăng ký thành viên.</p>
-                        <a href="{{route('subscribe')}}" class="btn btn-primary">Đăng Ký Thành Viên</a>
+                        <a href="{{route('subscribe')}}" class="btn btn-success">Đăng Ký Thành Viên</a>
                     </div>
                 </div>
             </div>
