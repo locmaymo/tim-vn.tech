@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\ApplicantController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\JoblistingController;
 use App\Http\Controllers\PostJobController;
 use App\Http\Controllers\SubscriptionController;
+use App\Http\Controllers\SuggestController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\isPremiumUser;
 use Illuminate\Support\Facades\Route;
@@ -21,10 +24,13 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 |
 */
 
-Route::get('/', function () {
-    return view('homepage');
-})->name('homepage');
+Route::get('/', [JoblistingController::class, 'index'])->name('homepage');
+// route tới about
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
 
+Route::get('job/show/{listing:slug}', [JoblistingController::class, 'show'])->name('job.show');
 
 Route::get('/register', [UserController::class, 'register'])->name('register');
 Route::get('/register/tim', [UserController::class, 'createTim'])->name('create.tim');
@@ -74,3 +80,28 @@ Route::get('job/{id}/delete', [PostJobController::class, 'destroy'])->name('job.
 Route::get('user/cv', [UserController::class, 'cv'])->name('user.cv');
 Route::post('user/cv', [UserController::class, 'updateCv'])->name('user.cv.update');
 Route::get('user/cv/view', [UserController::class, 'viewCv'])->name('user.cv.view');
+
+Route::get('applicants', [ApplicantController::class, 'index'])->name('applicants.index');
+Route::get('applicants/{listing:slug}', [ApplicantController::class, 'view'])->name('applicants.view');
+Route::post('shortlist/{listingId}/{userId}', [ApplicantController::class, 'shortlist'])->name('applicant.shortlist');
+
+Route::post('/application/{listingId}/submit', [ApplicantController::class, 'apply'])->name('application.submit');
+
+// route job.search và route job.filter
+Route::get('/job/search', [JoblistingController::class, 'search'])->name('job.search');
+
+// route tới suggest
+Route::get('/suggest', [SuggestController::class, 'index'])->name('suggest.index');
+
+Route::post('/suggest', [SuggestController::class, 'suggest'])->name('suggest');
+
+
+// route tới tạo cv
+Route::get('/user/cv/create', [UserController::class, 'createCv'])->name('create.cv');
+
+// bật tắt nhận việc mail
+Route::post('/user/mail', [DashboardController::class, 'mail'])->name('user.mail');
+
+
+//route tới xem preview pdf
+Route::get('/user/cv/preview', [UserController::class, 'previewPDF'])->name('preview.pdf');

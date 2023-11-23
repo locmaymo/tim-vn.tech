@@ -22,7 +22,7 @@
 {{--                            lấy ảnh bìa từ model Listing nếu có ở trong public/storage--}}
                             @if($listing->feature_image)
                                 <div class="img-fluid mt-4">
-                                    <img src="{{asset('storage/'.$listing->feature_image)}}" height="300" alt="">
+                                    <img src="{{asset('storage/'.$listing->feature_image)}}" height="auto" width="100%" alt="">
                                 </div>
                             @endif
                         </div>
@@ -31,6 +31,13 @@
                             <input type="text" name="title" id="title" class="form-control" value="{{$listing->title}}">
                             @if($errors->has('title'))
                                 <div class="error"> {{$errors->first('title')}}  </div>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <label for="predes">Mô Tả Ngắn</label>
+                            <input type="text" name="predes" id="predes" class="form-control" value="{{$listing->predes}}">
+                            @if($errors->has('predes'))
+                                <div class="error"> {{$errors->first('predes')}}  </div>
                             @endif
                         </div>
                         <div class="form-group">
@@ -62,14 +69,14 @@
                                 <label for="Parttime" class="form-check-label">Parttime</label>
                             </div>
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" name="job_type" id="casual" value="Casual"
-                                    {{$listing->job_type == 'Casual' ? 'checked' : ''}}
+                                <input type="radio" class="form-check-input" name="job_type" id="Remote" value="Từ Xa"
+                                    {{$listing->job_type == 'Từ Xa' ? 'checked' : ''}}
                                 >
-                                <label for="casual" class="form-check-label">Freelance</label>
+                                <label for="Remote" class="form-check-label">Từ Xa</label>
                             </div>
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" name="job_type" id="Contract" value="Contract"
-                                    {{$listing->job_type == 'Contract' ? 'checked' : ''}}
+                                <input type="radio" class="form-check-input" name="job_type" id="Contract" value="Hợp Đồng"
+                                    {{$listing->job_type == 'Hợp Đồng' ? 'checked' : ''}}
                                 >
                                 <label for="Contract" class="form-check-label">Hợp đồng</label>
                             </div>
@@ -93,13 +100,15 @@
                         </div>
                         <div class="form-group">
                             <label for="date">Ngày kết thúc</label>
-                            <input type="text" name="date" id="datepicker" class="form-control" value="{{$listing->application_close_date}}">
+{{--                            format value application_close_date from d-m-Y to Y-m-d--}}
+                            <input type="text" name="date" id="datepicker" class="form-control" value="{{Carbon\Carbon::parse($listing->application_close_date)->format('m/d/Y')}}">
                             @if($errors->has('date'))
                                 <div class="error"> {{$errors->first('date')}}  </div>
                             @endif
                         </div>
                         <div class="form-group mt-4">
-                            <button type="submit" class="btn btn-success">Lưu</button>
+                            <button type="submit" class="btn btn-success">Lưu Bài</button>
+                            <a href="/job/show/{{$listing->slug}}" class="btn btn-info ml-2" target="_blank">Xem Bài</a>
                         </div>
 
                     </form>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\RegistrationFormRequest;
 use App\Models\User;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -108,7 +109,8 @@ class UserController extends Controller
             User::find(auth()->user()->id)->update(['profile_pic' => $imagePath]);
         }
         $request->validate([
-            'name' => 'required'
+            'name' => 'required',
+            'about' => 'required',
         ]);
 
         User::find(auth()->user()->id)->update($request->except('profile_pic'));
@@ -165,5 +167,26 @@ class UserController extends Controller
 
         return response()->file($path);
     }
+
+//    hàm hiển thị form tạo cv
+    public function createCv()
+    {
+        return view('user.create-cv');
+    }
+
+
+//    lấy các trường trong form tạo cv và xem trước cv
+    public function previewPDF( Request $request)
+    {
+        $data = $request->all();
+        if ($request->hasFile('img')) {
+            $path = $request->file('img')->store('images', 'public');
+            return view('pdf', compact('data', 'path'));
+        }
+        return view('pdf', compact('data'));
+
+    }
+
+
 }
 

@@ -1,6 +1,8 @@
-$primary: #0d6efd;
-$primary-rgb: 13,110,253;
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
 
-//change danger color bootstrap scss to blue
-$danger: #0d6efd;
-$danger-rgb: 13,110,253;
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';

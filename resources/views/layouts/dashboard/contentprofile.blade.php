@@ -43,6 +43,13 @@
                         <div class="error"> {{$errors->first('name')}}  </div>
                     @endif
                 </div>
+                <div class="form-group">
+                        <label for="about">Giới Thiệu</label>
+                    <input type="text" name="about" id="name" class="form-control" value="{{auth()->user()->about}}">
+                    @if($errors->has('name'))
+                        <div class="error"> {{$errors->first('about')}}  </div>
+                    @endif
+                </div>
                 <div class="form-group mt-4">
                     <button type="submit" class="btn btn-success">Cập Nhật Thông Tin</button>
                 </div>

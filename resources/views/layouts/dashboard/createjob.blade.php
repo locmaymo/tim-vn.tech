@@ -22,6 +22,13 @@
                     @endif
                 </div>
                 <div class="form-group">
+                    <label for="predes">Mô Tả Ngắn</label>
+                    <input type="text" name="predes" id="predes" class="form-control">
+                    @if($errors->has('predes'))
+                        <div class="error"> {{$errors->first('predes')}}  </div>
+                    @endif
+                </div>
+                <div class="form-group">
                     <label for="description">Mô tả</label>
                     <textarea id="summernote2" name="description" class="form-control summernote"></textarea>
                     @if($errors->has('description'))
@@ -46,11 +53,11 @@
                         <label for="Parttime" class="form-check-label">Parttime</label>
                     </div>
                     <div class="form-check">
-                        <input type="radio" class="form-check-input" name="job_type" id="casual" value="Casual">
-                        <label for="casual" class="form-check-label">Freelance</label>
+                        <input type="radio" class="form-check-input" name="job_type" id="Remote" value="Từ Xa">
+                        <label for="Remote" class="form-check-label">Từ Xa</label>
                     </div>
                     <div class="form-check">
-                        <input type="radio" class="form-check-input" name="job_type" id="Contract" value="Contract">
+                        <input type="radio" class="form-check-input" name="job_type" id="Contract" value="Hợp Đồng">
                         <label for="Contract" class="form-check-label">Hợp đồng</label>
                     </div>
                     @if($errors->has('job_type'))

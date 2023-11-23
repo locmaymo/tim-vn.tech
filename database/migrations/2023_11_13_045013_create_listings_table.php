@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('user_id');
             $table->string('title');
+            $table->text('predes');
             $table->text('description');
             $table->text('roles');
             $table->string('job_type');

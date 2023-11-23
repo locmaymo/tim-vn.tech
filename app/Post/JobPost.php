@@ -23,6 +23,7 @@ class JobPost{
         $imagePath = $this->getImagePath($data);
         $this->listing->feature_image = $imagePath;
         $this->listing->title = $data['title'];
+        $this->listing->predes = $data['predes'];
         $this->listing->user_id = auth()->user()->id;
         $this->listing->description = $data['description'];
         $this->listing->roles = $data['roles'];
@@ -40,6 +41,7 @@ class JobPost{
 
             $this->listing->find($id)->update(['feature_image' => $this->getImagePath($data)]);
         }
-        $this->listing->find($id)->update($data->except('feature_image'));
+        $this->listing->find($id)->update(['application_close_date' => \Carbon\Carbon::createFromFormat('m/d/Y', $data['date'])->format('Y-m-d')]);
+        $this->listing->find($id)->update($data->except('feature_image','application_close_date'));
     }
 }

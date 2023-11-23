@@ -1,0 +1,21 @@
+{
+    "nunito": {
+        "200_italic": "D:\\Learning\\DaiHoc\\totnghiep\\untitled\\storage\\fonts\/nunito_200_italic_c6fe6163fa53ae06c4d278afb09f1d1e",
+        "300_italic": "D:\\Learning\\DaiHoc\\totnghiep\\untitled\\storage\\fonts\/nunito_300_italic_5564b019de9ee757b8e74969231a39c6",
+        "italic": "D:\\Learning\\DaiHoc\\totnghiep\\untitled\\storage\\fonts\/nunito_italic_7a5e338072de710d78e80a0b7b676e13",
+        "600_italic": "D:\\Learning\\DaiHoc\\totnghiep\\untitled\\storage\\fonts\/nunito_600_italic_70540b8497fcdcad67439a1da170a6cd",
+        "bold_italic": "D:\\Learning\\DaiHoc\\totnghiep\\untitled\\storage\\fonts\/nunito_bold_italic_f7385ade290a5e83b60b5666bb14efdd",
+        "800_italic": "D:\\Learning\\DaiHoc\\totnghiep\\untitled\\storage\\fonts\/nunito_800_italic_18f05207d6823bed1efe267692280109",
+        "900_italic": "D:\\Learning\\DaiHoc\\totnghiep\\untitled\\storage\\fonts\/nunito_900_italic_7d0c00015d678bd782d128e933b0098e",
+        "200": "D:\\Learning\\DaiHoc\\totnghiep\\untitled\\storage\\fonts\/nunito_200_0e1804460d708a8c8812dd2bb9a9d89f",
+        "300": "D:\\Learning\\DaiHoc\\totnghiep\\untitled\\storage\\fonts\/nunito_300_ee9ff98a878d2bcec5ac60166e67ac59",
+        "normal": "D:\\Learning\\DaiHoc\\totnghiep\\untitled\\storage\\fonts\/nunito_normal_51264aea5373c13e99081e0e39bbfb0d",
+        "600": "D:\\Learning\\DaiHoc\\totnghiep\\untitled\\storage\\fonts\/nunito_600_260a41cb865a0435c462e0b12cc10190",
+        "bold": "D:\\Learning\\DaiHoc\\totnghiep\\untitled\\storage\\fonts\/nunito_bold_a3fe31648353394ca5aaeaff65373ead",
+        "800": "D:\\Learning\\DaiHoc\\totnghiep\\untitled\\storage\\fonts\/nunito_800_85511e1b9b7db85c1ab58555a3c6922c",
+        "900": "nunito_900_cc18120a1ee07e8f88043c57178bd0cc"
+    },
+    "summernote": {
+        "normal": "summernote_normal_753d0c2cf5939cd20e699c2bff28492a"
+    }
+}

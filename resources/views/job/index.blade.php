@@ -20,7 +20,7 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/main.css')}}" rel="stylesheet">
     {{--    summernote--}}
     {{--    <link href="{{asset('css/summernote.min.css')}}" rel="stylesheet">--}}
     {{--    <link rel="stylesheet" href="{{asset('css/summernote-bs4.min.css')}}">--}}
@@ -33,7 +33,7 @@
     {{--    datepicker--}}
 
     <link href="{{asset('css/bootstrap-datepicker.min.css')}}" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/5f924928fd.js" crossorigin="anonymous"></script>
 {{----}}
 </head>
 
