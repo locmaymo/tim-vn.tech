@@ -58,7 +58,7 @@
             <!-- Begin Page Content -->
             <div class="container">
                 <h1>Trợ Lý AI</h1>
-                @if(auth()->user()-user_type == 'employee')
+                @if(auth()->user()->user_type == 'employee')
                     <form class="pt-4"action="{{route('suggest')}}" method="post">
                         @csrf
                         <label for="message">Gợi ý nội dung CV:</label>
