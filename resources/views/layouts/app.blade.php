@@ -113,16 +113,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item ">
-                    <a class="nav-link" href="{{ route('homepage') }}">Công Việc</a>
+                    <a class="nav-link" href="">Công Việc</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('help')}}">Trợ Giúp</a>
+                    <a class="nav-link" href="">Trợ Giúp</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('about')}}" >Giới Thiệu</a>
+                    <a class="nav-link" href="" >Giới Thiệu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('contact')}}">Liên Hệ</a>
+                    <a class="nav-link" href="">Liên Hệ</a>
                 </li>
                 @if(!Auth::check())
                     <li class="nav-item mx-lg-2 my-2 my-lg-0">
@@ -217,13 +217,13 @@
             <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end mt-md-4  align-items-center">
                 <div class="row">
                     <div class="col">
-                        <a href="{{ route('contact') }}" class="text-nowrap fw-bold" style="font-family: 'Inter Semi Bold',sans-serif;text-decoration: none; font-size: 15px; color: white; margin-top: 0px">Liên Hệ</a>
+                        <a href="" class="text-nowrap fw-bold" style="font-family: 'Inter Semi Bold',sans-serif;text-decoration: none; font-size: 15px; color: white; margin-top: 0px">Liên Hệ</a>
                     </div>
                     <div class="col">
-                        <a href="{{ route('about') }}" class="text-nowrap fw-bold" style="font-family: 'Inter Semi Bold',sans-serif;text-decoration: none; font-size: 15px; color: white; margin-top: 0px">Giới Thiệu</a>
+                        <a href="" class="text-nowrap fw-bold" style="font-family: 'Inter Semi Bold',sans-serif;text-decoration: none; font-size: 15px; color: white; margin-top: 0px">Giới Thiệu</a>
                     </div>
                     <div class="col">
-                        <a href="{{ route('help') }}" class="text-nowrap fw-bold" style="font-family: 'Inter Semi Bold',sans-serif;text-decoration: none; font-size: 15px; color: white; margin-top: 0px">Hướng Dẫn</a>
+                        <a href="" class="text-nowrap fw-bold" style="font-family: 'Inter Semi Bold',sans-serif;text-decoration: none; font-size: 15px; color: white; margin-top: 0px">Hướng Dẫn</a>
                     </div>
 
                 </div>
