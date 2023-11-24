@@ -68,11 +68,12 @@ Người tham chiếu. Hãy viết như trên cho tôi với các thông tin nh�
 
        }
 
+        $apiKeyOpenAI = config('app.open_ai_api_key');
 
 
         $data = Http::withHeaders([
            'Content-Type' => 'application/json',
-           'Authorization' => 'Bearer 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',
+           'Authorization' => 'Bearer ' . $apiKeyOpenAI,
        ])->post('https://api.openai.com/v1/chat/completions', [
              'model' => 'gpt-3.5-turbo-1106',
              'messages' =>[
@@ -84,8 +85,6 @@ Người tham chiếu. Hãy viết như trên cho tôi với các thông tin nh�
              'temperature' => 0.9,
 
              'top_p' => 1,
-
-             'max_tokens' => 3000,
              'frequency_penalty' => 0.0,
              'presence_penalty' => 0.6,
              'stop' => ["11."],
