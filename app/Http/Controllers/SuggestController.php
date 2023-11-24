@@ -71,9 +71,9 @@ Người tham chiếu. Hãy viết như trên cho tôi với các thông tin nh�
          elseif($request->has('post'))
          {
                 $content = $request->post;
-                $search = "(Viết Bằng Tiếng Việt ) Viết bài đăng tuyển dụng
+                $search = "(Viết Bằng Tiếng Việt ) Viết bài đăng tuyển dụng dài tầm 1 trang cho lập trình viên nội dung bám theo format sau:
 
-                 ví dụ: Tiêu đề: UX/UI Designer
+               Tiêu đề: UX/UI Designer
 
 Mô tả ngắn: Thiết kế trải nghiệm người dùng và giao diện đồ họa tương tác.
 
@@ -105,7 +105,7 @@ Cạnh tranh và phụ thuộc vào kinh nghiệm và khả năng của ứng vi
 
 Ngày kết thúc: Vị trí sẽ được đóng khi đã tìm thấy ứng viên phù hợp.
 
-                 với các thông tin tôi cung cấp sau đây: (". $content . ") Viết dưới định dạng html: mục lớn thì thẻ h3 và bold, nội dung thì viết thẻ p, có thẻ br để xuống dòng, font chữ nunito màu #0C3149 để tôi nhúng đoạn này vào website của tôi.";
+                Hãy viết như trên cho tôi với các thông tin như sau: (". $content . ") Viết dưới định dạng html: mục lớn thì thẻ h3 và bold, nội dung thì viết thẻ p, có thẻ br để xuống dòng, font chữ nunito màu #0C3149 để tôi nhúng đoạn này vào website của tôi.";
          }
 
          elseif ($request->has('mail2'))
