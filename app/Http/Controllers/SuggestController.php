@@ -93,37 +93,6 @@ Người tham chiếu. Hãy viết như trên cho tôi với các thông tin nh�
         return view('ai', ['result' => $result]);
     }
 
-    public function suggestMail(Request $request)
-    {
-//        sử dụng openai để đưa ra đề xuất viết nội dung cv cho người dùng với các trường người dùng nhập vào   sử dụng openai api để tạo một form điền vào và gợi ý cho ứng viên một mẫu cv với các trường nhập vào gồm
-       $search = $request->get;
-       $search = "(Viết Bằng Tiếng Việt )
-
-Viết mail đúng chuẩn format email gửi nhà tuyển dụng với nội dung với các thông tin tôi cung cấp sau đây: (". $search . ") Viết dưới định dạng html: mục lớn thì thẻ h3 và bold, nội dung thì viết thẻ p, font chữ nunito màu #0C3149 để tôi nhúng đoạn này vào website của tôi.";
-
-
-       $data = Http::withHeaders([
-           'Content-Type' => 'application/json',
-           'Authorization' => 'Bearer ' .env('OPENAI_API_KEY'),
-       ])->post('https://api.openai.com/v1/chat/completions', [
-           'model' => 'gpt-3.5-turbo-1106',
-           'messages' =>[
-               [
-                   "role" => "user",
-                   "content" => $search
-               ]
-           ],
-           'temperature' => 0.9,
-
-           'top_p' => 1,
-           'frequency_penalty' => 0.0,
-           'presence_penalty' => 0.6,
-           'stop' => ["11."],
-       ]);
-         $result = json_decode($data->getBody());
-
-        return view('ai', ['result' => $result]);
-    }
 
     public function index()
     {
