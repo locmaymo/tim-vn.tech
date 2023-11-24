@@ -23,7 +23,7 @@
             <p>Liên hệ với chúng tôi thông qua mạng xã hội:</p>
             <ul>
                 <li><a href="https://facebook.com/fb.phamloc">Facebook</a></li>
-                <li><a href="https://github.com/locmaymo/tim-vn">Github</a></li>
+                <li><a href="https://github.com/locmaymo/tim-vn.tech">Github</a></li>
                 <li><a href="https://www.youtube.com/@MayMoOfficial">Youtube</a></li>
             </ul>
 
