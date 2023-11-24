@@ -61,12 +61,58 @@ Người tham chiếu. Hãy viết như trên cho tôi với các thông tin nh�
          }
 
 
-       else
+       elseif($request->has('mail'))
        {
            $content = $request->mail;
            $search = "(Viết Bằng Tiếng Việt ) Viết thư email ứng tuyển  có subject, chào hỏi, nội dung, lý do, lời cảm ơn, lời chào trân trọng và tên người gửi. để gửi nhà tuyển dụng  với nội dung với các thông tin tôi cung cấp sau đây: (". $content . ") Viết dưới định dạng html: mục lớn thì thẻ h3 và bold, nội dung thì viết thẻ p, có thẻ br để xuống dòng, font chữ nunito màu #0C3149 để tôi nhúng đoạn này vào website của tôi.";
 
        }
+
+         elseif($request->has('post'))
+         {
+                $content = $request->post;
+                $search = "(Viết Bằng Tiếng Việt ) Viết bài đăng tuyển dụng
+
+                 ví dụ: Tiêu đề: UX/UI Designer
+
+Mô tả ngắn: Thiết kế trải nghiệm người dùng và giao diện đồ họa tương tác.
+
+Mô tả:
+
+Chúng tôi đang tìm kiếm một UX/UI Designer có sự sáng tạo và khả năng thiết kế giao diện người dùng xuất sắc để tham gia vào đội ngũ thiết kế của chúng tôi. Với vị trí này, bạn sẽ đóng vai trò quan trọng trong việc tạo ra trải nghiệm người dùng tốt nhất thông qua giao diện đồ họa tương tác.
+
+Nhiệm vụ:
+
+Thiết kế và phát triển giao diện người dùng tương tác đẹp và dễ sử dụng.
+Tạo ra các wireframe, mockup và prototype để thể hiện ý tưởng thiết kế.
+Hợp tác chặt chẽ với các nhóm phát triển để đảm bảo tính nhất quán giữa thiết kế và triển khai.
+Yêu cầu:
+
+Kỹ năng sử dụng các công cụ thiết kế như Sketch, Adobe XD, Figma hoặc Illustrator.
+Hiểu biết về nguyên lý thiết kế UX/UI và xu hướng thiết kế hiện đại.
+Kỹ năng tuyệt vời về giao tiếp và làm việc nhóm.
+Công việc:
+
+Fulltime: Có sẵn.
+Parttime: Không có.
+Hợp đồng: Tuỳ thuộc vào dự án cụ thể.
+Địa điểm: Hà Nội
+
+Mức lương: 20000000
+hoặc
+
+Cạnh tranh và phụ thuộc vào kinh nghiệm và khả năng của ứng viên.
+
+Ngày kết thúc: Vị trí sẽ được đóng khi đã tìm thấy ứng viên phù hợp.
+
+                 với các thông tin tôi cung cấp sau đây: (". $content . ") Viết dưới định dạng html: mục lớn thì thẻ h3 và bold, nội dung thì viết thẻ p, có thẻ br để xuống dòng, font chữ nunito màu #0C3149 để tôi nhúng đoạn này vào website của tôi.";
+         }
+
+         elseif ($request->has('mail2'))
+         {
+                $content = $request->mail2;
+                $search = "(Viết Bằng Tiếng Việt ) Viết thư email gửi ứng viên tiềm năng có subject, chào hỏi, nội dung, lý do, lời chào trân trọng và tên người gửi. để gửi cho ứng viên  với nội dung với các thông tin tôi cung cấp sau đây: (". $content . ") Viết dưới định dạng html: mục lớn thì thẻ h3 và bold, nội dung thì viết thẻ p, có thẻ br để xuống dòng, font chữ nunito màu #0C3149 để tôi nhúng đoạn này vào website của tôi.";
+         }
 
         $apiKeyOpenAI = config('app.open_ai_api_key');
 

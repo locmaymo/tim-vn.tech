@@ -58,30 +58,57 @@
             <!-- Begin Page Content -->
             <div class="container">
                 <h1>Trợ Lý AI</h1>
-                <form class="pt-4"action="{{route('suggest')}}" method="post">
-                    @csrf
-                    <label for="message">Gợi ý nội dung CV:</label>
-                    <div class="row">
-                        <div class="col-10">
-                            <input id="message" type="text" name="cv" autocomplete="off" class="form-control p-4 shadow-sm" style="border-radius: 40px; height: 30px ; border: solid 0px grey; width:100%" placeholder="Ví dụ: Phạm Quang Lộc, học Bưu Chính Viễn Thông từ 2019, thích chơi game, thạo photoshop, làm web laravel">
+                @if(auth()->user()-user_type == 'employee')
+                    <form class="pt-4"action="{{route('suggest')}}" method="post">
+                        @csrf
+                        <label for="message">Gợi ý nội dung CV:</label>
+                        <div class="row">
+                            <div class="col-10">
+                                <input id="message" type="text" name="cv" autocomplete="off" class="form-control p-4 shadow-sm" style="border-radius: 40px; height: 30px ; border: solid 0px grey; width:100%" placeholder="Ví dụ: Phạm Quang Lộc, học Bưu Chính Viễn Thông từ 2019, thích chơi game, thạo photoshop, làm web laravel">
+                            </div>
+                            <div class="col-2 d-flex justify-content-center">
+                                <button class="btn btn-success px-4" style="border-radius: 40px" type="submit">Xem Gợi Ý</button>
+                            </div>
                         </div>
-                        <div class="col-2 d-flex justify-content-center">
-                            <button class="btn btn-success px-4" style="border-radius: 40px" type="submit">Xem Gợi Ý</button>
+                    </form>
+                    <form class="pt-4"action="{{route('suggest')}}" method="post">
+                        @csrf
+                        <label for="message">Gợi ý nội dung email viết cho nhà tuyển dụng:</label>
+                        <div class="row">
+                            <div class="col-10">
+                                <input id="message" type="text" name="mail" autocomplete="off" class="form-control p-4 shadow-sm" style="border-radius: 40px; height: 30px ; border: solid 0px grey; width:100%" placeholder="Ví dụ: Phạm Quang Lộc mong muốn được hợp tác với công ty">
+                            </div>
+                            <div class="col-2 d-flex justify-content-center">
+                                <button class="btn btn-success px-4" style="border-radius: 40px" type="submit">Xem Gợi Ý</button>
+                            </div>
                         </div>
-                    </div>
-                </form>
-                <form class="pt-4"action="{{route('suggest')}}" method="post">
-                    @csrf
-                    <label for="message">Gợi ý nội dung email viết cho nhà tuyển dụng:</label>
-                    <div class="row">
-                        <div class="col-10">
-                            <input id="message" type="text" name="mail" autocomplete="off" class="form-control p-4 shadow-sm" style="border-radius: 40px; height: 30px ; border: solid 0px grey; width:100%" placeholder="Ví dụ: Phạm Quang Lộc mong muốn được hợp tác với công ty">
+                    </form>
+                @else
+                    <form class="pt-4"action="{{route('suggest')}}" method="post">
+                        @csrf
+                        <label for="message">Gợi ý nội Bài đăng tuyển dụng:</label>
+                        <div class="row">
+                            <div class="col-10">
+                                <input id="message" type="text" name="post" autocomplete="off" class="form-control p-4 shadow-sm" style="border-radius: 40px; height: 30px ; border: solid 0px grey; width:100%" placeholder="Ví dụ: UX UI designer Thiết kế trải nghiệm người dùng và giao diện đồ họa tương tác.">
+                            </div>
+                            <div class="col-2 d-flex justify-content-center">
+                                <button class="btn btn-success px-4" style="border-radius: 40px" type="submit">Xem Gợi Ý</button>
+                            </div>
                         </div>
-                        <div class="col-2 d-flex justify-content-center">
-                            <button class="btn btn-success px-4" style="border-radius: 40px" type="submit">Xem Gợi Ý</button>
+                    </form>
+                    <form class="pt-4"action="{{route('suggest')}}" method="post">
+                        @csrf
+                        <label for="message">Gợi ý nội dung email viết cho nhà tuyển dụng:</label>
+                        <div class="row">
+                            <div class="col-10">
+                                <input id="message" type="text" name="mail2" autocomplete="off" class="form-control p-4 shadow-sm" style="border-radius: 40px; height: 30px ; border: solid 0px grey; width:100%" placeholder="Ví dụ: Công Ty Tim rất ấn tượng với Lộc. Bạn có thể đến công ty tôi phỏng vấn">
+                            </div>
+                            <div class="col-2 d-flex justify-content-center">
+                                <button class="btn btn-success px-4" style="border-radius: 40px" type="submit">Xem Gợi Ý</button>
+                            </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                @endif
                 @if(isset($result->choices[0]->message->content))
                 <p>{!!$result->choices[0]->message->content!!}</p>
                 @endif
