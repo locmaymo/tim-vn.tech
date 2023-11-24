@@ -17,12 +17,17 @@ class ShortlistMail extends Mailable
      * Create a new message instance.
      */
 
+    public $company_name;
+    public $company_email;
     public $name;
     public $title;
-    public function __construct( $name, $title)
+    public function __construct( $name, $title, $company_name, $company_email)
     {
         $this->name = $name;
         $this->title = $title;
+        $this->company_name = $company_name;
+        $this->company_email = $company_email;
+
     }
 
 
@@ -32,7 +37,7 @@ class ShortlistMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Chúc Mừng Bạn Dã Được Chọn Vào Một Danh Sách trên Tim-vn.tech',
+            subject: 'Tim-vn.tech - Có một nhà tuyển dụng đã chấp nhận ứng tuyển của bạn',
         );
     }
 

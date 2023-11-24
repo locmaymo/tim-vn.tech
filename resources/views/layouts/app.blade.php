@@ -199,7 +199,7 @@
                                 <a href="https://www.facebook.com/fb.phamloc" target="_blank"><i class="fa-brands fa-facebook fa-xl" style="color: #ffffff;"></i></a>
                             </div>
                             <div class="col-2">
-                                <a href="https://github.com/locmaymo/tim-vn" target="_blank"><i class="fa-brands fa-github fa-xl" style="color: #ffffff;"></i></a>
+                                <a href="https://github.com/locmaymo/tim-vn.tech" target="_blank"><i class="fa-brands fa-github fa-xl" style="color: #ffffff;"></i></a>
                             </div>
                             <div class="col-2">
                                 <a href="https://www.youtube.com/channel/UCzA8vYmFxMckvcNypWpwnQw" target="_blank"> <i class="fa-brands fa-youtube fa-xl" style="color: #ffffff;"></i></a>

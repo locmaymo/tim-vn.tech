@@ -5,7 +5,7 @@
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('homepage')}}">
             <div class="sidebar-brand-icon mx-4">
-                <img class="img-fluid" src="https://raw.githubusercontent.com/locmaymo/tim-vn/master/public/image/logo-tim-white-trans.png" alt="">
+                <img class="img-fluid" src="https://raw.githubusercontent.com/locmaymo/tim-vn.tech/test/public/image/logo-tim-white-trans.png" alt="">
             </div>
             <div class="sidebar-brand-text mx-3">Trang Chủ</div>
         </a>
@@ -123,7 +123,7 @@
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('homepage')}}">
             <div class="sidebar-brand-icon mx-4">
-                <img class="img-fluid" src="https://raw.githubusercontent.com/locmaymo/tim-vn/master/public/image/logo-tim-white-trans.png" alt="">
+                <img class="img-fluid" src="https://raw.githubusercontent.com/locmaymo/tim-vn.tech/master/public/image/logo-tim-white-trans.png" alt="">
             </div>
             <div class="sidebar-brand-text mx-3">Trang Chủ</div>
         </a>

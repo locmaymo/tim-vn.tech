@@ -52,13 +52,16 @@ class ApplicantController extends Controller
 
     public function shortlist($listingId, $userId)
     {
+        $company_name = auth()->user()->name;
+        $company_email = auth()->user()->email;
+
         $listing = Listing::find($listingId);
         $user = User::find($userId);
         if($listing){
             $listing->users()->updateExistingPivot($userId, ['shortlisted' => true]);
 //            kiểm tra xem ứng viên đó trong db trường mail có true hay không nếu có thì gửi mail
             if($user->mail == true){
-                Mail::to($user->email)->queue(new ShortlistMail($user->name, $listing->title));
+                Mail::to($user->email)->queue(new ShortlistMail($user->name, $listing->title, $company_name, $company_email));
             }
             return redirect()->back()->with('message', 'Đã thêm vào danh sách');
         }

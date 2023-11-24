@@ -54,7 +54,13 @@ class DashboardController extends Controller
          $jobs = Listing::where('user_id', Auth::user()->id)->get();
 
 
-        return view('dashboard', compact('listings', 'jobs', 'count', 'count2' ));
+//         ở màn hình của employee sẽ lấy tất cả jobs gần nhât mà user đã ứng tuyển để phân trang
+        $jobs_applied = User::where('id', Auth::user()->id)->with('listings')->first();
+        $jobs_applied = $jobs_applied->listings()->get();
+
+
+
+        return view('dashboard', compact('listings', 'jobs', 'count', 'count2' , 'jobs_applied' ));
     }
 
     public function verify()
@@ -88,6 +94,7 @@ class DashboardController extends Controller
         $user->save();
         return redirect()->back()->with('message', 'Đã bật nhận mail, bạn sẽ nhận được mail khi có nhà tuyển dụng chấp nhận bạn');
     }
+
 
 
 }
