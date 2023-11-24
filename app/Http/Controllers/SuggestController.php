@@ -89,7 +89,7 @@ Người tham chiếu. Hãy viết như trên cho tôi với các thông tin nh�
              'presence_penalty' => 0.6,
              'stop' => ["11."],
             ]);
-      return  $result = json_decode($data->getBody());
+        $result = json_decode($data->getBody());
 
         return view('ai', ['result' => $result]);
     }
