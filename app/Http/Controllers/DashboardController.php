@@ -18,7 +18,7 @@ class DashboardController extends Controller
     {
 
 //        lấy ra số lượng job của user và đếm số lượng user đã ứng tuyển
-       $listings = Listing::withCount('users')->where('user_id', auth()->user()->id)->get();
+        $listings = Listing::withCount('users')->where('user_id', auth()->user()->id)->get();
 
 //        lấy ra số lượng job của user và lấy thông tin các user đã ứng tuyển
         $shortlists = Listing::with('users')->where('user_id', auth()->user()->id)->get();
@@ -45,11 +45,6 @@ class DashboardController extends Controller
 
 
 
-////        đếm các user đang đợi được shortlist
-//     return   $users = User::whereHas('listings', function ($query) {
-//            $query->where('user_id', auth()->user()->id)->where('shortlisted', true);
-//        })->get();
-
 //        lấy ra tất cả các job của user
          $jobs = Listing::where('user_id', Auth::user()->id)->get();
 
@@ -58,9 +53,19 @@ class DashboardController extends Controller
         $jobs_applied = User::where('id', Auth::user()->id)->with('listings')->first();
         $jobs_applied = $jobs_applied->listings()->get();
 
+//        ở màn hình của employer sẽ lấy tất cả các user đã được employer shortlist để tạo bảng
+        $users_shortlisted = Listing::where('user_id', Auth::user()->id)->with('users')->get();
+        $users_shortlisted = $users_shortlisted->pluck('users')->flatten();
+
+//        lấy ra tất cả các users có pivot shortlisted = true và lấy pivot->listing_id tương ứng và lấy ra tên các job tương ứng cho vào mảng đó
+        $users_shortlisted = $users_shortlisted->where('pivot.shortlisted', true);
 
 
-        return view('dashboard', compact('listings', 'jobs', 'count', 'count2' , 'jobs_applied' ));
+
+
+
+
+        return view('dashboard', compact('listings', 'jobs', 'count', 'count2' , 'jobs_applied', 'users_shortlisted' ));
     }
 
     public function verify()

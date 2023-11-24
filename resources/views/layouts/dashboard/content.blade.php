@@ -162,7 +162,44 @@
         </div>
     </div>
 
-
+{{--    bảng ứng viên đã được shortlist với biến $users_shortlisted--}}
+{{--    <div class="card shadow mb-4">--}}
+{{--        <div class="card-header py-3">--}}
+{{--            <h6 class="m-0 font-weight-bold text-info">Danh sách ứng viên đã được duyệt</h6>--}}
+{{--        </div>--}}
+{{--        <div class="card-body">--}}
+{{--            <div class="table-responsive">--}}
+{{--                <table id="table" class="table table-bordered" width="100%" cellspacing="0">--}}
+{{--                    <thead>--}}
+{{--                        <tr>--}}
+{{--                            <th>Stt</th>--}}
+{{--                            <th>Tên ứng viên</th>--}}
+{{--                            <th>Email</th>--}}
+{{--                            <th>Ngày ứng tuyển</th>--}}
+{{--                        </tr>--}}
+{{--                    </thead>--}}
+{{--                    <tfoot>--}}
+{{--                        <tr>--}}
+{{--                            <th>Stt</th>--}}
+{{--                            <th>Tên ứng viên</th>--}}
+{{--                            <th>Email</th>--}}
+{{--                            <th>Ngày ứng tuyển</th>--}}
+{{--                        </tr>--}}
+{{--                    </tfoot>--}}
+{{--                    <tbody>--}}
+{{--                    @foreach($users_shortlisted as $user)--}}
+{{--                        <tr>--}}
+{{--                            <td>{{$loop->iteration}}</td>--}}
+{{--                            <td>{{$user->name}}</td>--}}
+{{--                            <td>{{$user->email}}</td>--}}
+{{--                            <td>{{$user->pivot->created_at->format('d/m/Y')}}</td>--}}
+{{--                        </tr>--}}
+{{--                    @endforeach--}}
+{{--                    </tbody>--}}
+{{--                </table>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    --}}
     @else
         <div class="row">
 

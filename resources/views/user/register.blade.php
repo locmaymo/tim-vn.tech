@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6 text-center">
                 <h1>Bạn là nhà tuyển dụng?</h1>
-                <a href="{{route('create.employer')}}" class="btn btn-success">Đăng ký nhà tuyển dụng</a>
+                <a href="{{route('create.employer')}}" class="btn btn-info">Đăng ký nhà tuyển dụng</a>
             </div>
             <div class="col-md-6 text-center">
                 <h1>Bạn là ứng viên?</h1>

@@ -86,7 +86,7 @@ class UserController extends Controller
             else if (auth()->user()->user_type == 'employee')
                 return redirect()->intended('');
         }
-        return 'Sai email hoặc mật khẩu';
+        return back()->with('error', 'Tài khoản hoặc mật khẩu không đúng');
     }
 //    hàm xử lý đăng xuất
     public function logout()

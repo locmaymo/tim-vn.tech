@@ -2,40 +2,47 @@
 
 @section('content')
 {{----}}
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                @include('message')
-                <div class="card">
-                    <div class="card-header">Đăng Nhập</div>
-                    <form action="" method="post">@csrf
-                        <div class="card-body">
-                            <div class="form-group">
-                                <label for="email">Địa chỉ email</label>
-                                <input type="email" name="email" id="email" class="form-control" placeholder="Nhập địa chỉ email">
-                            </div>
-                            @if($errors->has('name'))
-                                <p class="text-danger">{{$errors->first('email')}}</p>
-                            @else<br>
-                            @endif
-                            <div class="form-group">
-                                <label for="password">Mật khẩu</label>
-                                <input type="password" name="password" id="password" class="form-control" placeholder="Nhập mật khẩu">
-                                <input class="mt-2 " type="checkbox" onclick="show1()"> Hiển Thị
-                            </div>
-                            @if($errors->has('name'))
-                                <p class="text-danger">{{$errors->first('password')}}</p>
-                            @else<br>
-                            @endif
-                            <div class="form-group text-center">
-                                <button type="submit" class="btn btn-primary">Đăng Nhập</button>
-                            </div>
+{{--message error--}}
+@if(session()->has('error'))
+    <div class="alert alert-danger alert-dismissible fade show m-0" role="alert">
+        {{session()->get('error')}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
 
+    <div class="container mt-5">
+        <div class="row d-flex justify-content-center mt-3">
+            <div class="col-md-4">
+                <div class="card shadow border-0" style="border-radius: 55px">
+                    <div class="card-body">
+                        <div class="row d-flex justify-content-center">
+                            <form action="" method="post">@csrf
+                                <div class="col-11 m-3 text-center">
+                                    <h2 class="fw-bold">Đăng Nhập Tim-VN.Tech</h2>
+                                </div>
+                                <div class="col-11 m-3">
+                                    <input type="email" name="email" id="email" class="form-control shadow-none" placeholder="Email" style="border-radius: 30px" value="">
+                                    @if($errors->has('email'))
+                                        <p class="text-danger">Bạn chưa nhập email</p>
+                                    @endif
+                                </div>
+                                <div class="col-11 m-3">
+                                    <input type="password" name="password" id="password" class="form-control shadow-none" placeholder="mật Khẩu" style="border-radius: 30px" value="">
+                                    @if($errors->has('password'))
+                                        <p class="text-danger">Bạn chưa nhập password</p>
+                                    @endif
+                                </div>
+                                <div class="col-11 m-3">
+                                    <input class="mt-2 " type="checkbox"  onclick="show1()"> Hiển Thị
+                                </div>
+                                <div class="col-11 m-3 d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-primary container-fluid" style="border-radius: 40px" >Đăng Nhập</button>
+                                </div>
+                            </form>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
 <script>

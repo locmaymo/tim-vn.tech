@@ -51,14 +51,18 @@
     <p>{!!$listing->description!!}</p>
     <h4 style="font-family: Inter, sans-serif">Yêu Cầu:</h4>
     <p>{!! $listing->roles !!}</p>
+    <p class="">Email liên hệ của công ty: <b>{{$listing->profile->email}}</b></p>
 
-    <h5 class="fw-bold">Mức Lương:
+    <h5 class="fw-bold mt-4">Mức Lương:
         @if(is_numeric($listing->salary))
                 {{number_format($listing->salary)}} vnđ
         @else
             {{$listing->salary}}
         @endif
     </h5>
+
+{{--    email liên hệ--}}
+
 
 
     @if(auth()->user())
