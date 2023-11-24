@@ -84,11 +84,13 @@ Người tham chiếu. Hãy viết như trên cho tôi với các thông tin nh�
              'temperature' => 0.9,
 
              'top_p' => 1,
+
+             'max_tokens' => 3000,
              'frequency_penalty' => 0.0,
              'presence_penalty' => 0.6,
              'stop' => ["11."],
             ]);
-         $result = json_decode($data->getBody());
+        return $result = json_decode($data->getBody());
 
         return view('ai', ['result' => $result]);
     }
