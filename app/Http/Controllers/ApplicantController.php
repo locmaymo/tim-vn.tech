@@ -14,7 +14,7 @@ class ApplicantController extends Controller
     public function index()
     {
         //        lấy ra số lượng job của user và lấy thông tin các user đã ứng tuyển
-        $shortlists = Listing::with('users')->where('user_id', auth()->user()->id)->get();
+        $shortlists = Listing::latest()->with('users')->where('user_id', auth()->user()->id)->get();
 
 //        lấy ra số lượng user chưa được shortlist trong các job vừa lấy và lưu vào mảng $counts
         $counts = [];
