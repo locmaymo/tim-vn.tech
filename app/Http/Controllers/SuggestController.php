@@ -72,7 +72,7 @@ Người tham chiếu. Hãy viết như trên cho tôi với các thông tin nh�
 
         $data = Http::withHeaders([
            'Content-Type' => 'application/json',
-           'Authorization' => 'Bearer ' .env('OPENAI_API_KEY'),
+           'Authorization' => 'Bearer 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',
        ])->post('https://api.openai.com/v1/chat/completions', [
              'model' => 'gpt-3.5-turbo-1106',
              'messages' =>[
