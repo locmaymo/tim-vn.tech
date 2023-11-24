@@ -29,7 +29,7 @@ class JobPost{
         $this->listing->roles = $data['roles'];
         $this->listing->job_type = $data['job_type'];
         $this->listing->address = $data['address'];
-//        $this->listing->salary = $data['salary'];
+        $this->listing->salary = $data["salary"];
         $this->listing->application_close_date = \Carbon\Carbon::createFromFormat('m/d/Y', $data['date'])->format('Y-m-d');
         $this->listing->slug = Str::slug($data['title']). '.'. Str::uuid();
         $this->listing->save();
