@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=900, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="{{asset('image/logo-tim.png')}}" type="image/x-icon">
 
-    <title>Đăng Bài</title>
+    <title>Trình tạo CV</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">

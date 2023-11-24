@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="{{asset('image/logo-tim.png')}}" type="image/x-icon">
 
-    <title>Đăng Bài</title>
+    <title>Danh Sách Bài Đăng</title>
 
 
     <!-- Custom fonts for this template-->

@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="{{asset('image/logo-tim.png')}}" type="image/x-icon">
 
-    <title>Đăng Bài</title>
+    <title>CV của bạn</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">

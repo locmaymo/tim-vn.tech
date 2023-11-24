@@ -30,6 +30,16 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
+// route tới contact
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
+
+//route tới help
+Route::get('/help', function () {
+    return view('help');
+})->name('help');
+
 Route::get('job/show/{listing:slug}', [JoblistingController::class, 'show'])->name('job.show');
 
 Route::get('/register', [UserController::class, 'register'])->name('register');
