@@ -37,7 +37,6 @@ class PostJobController extends Controller
 
     public function edit(Listing $listing)
     {
-        return $listing;
         return view('job.edit',compact('listing'));
     }
 
