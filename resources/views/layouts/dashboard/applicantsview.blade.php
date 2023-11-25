@@ -1,6 +1,22 @@
 
+
 <div class="container-fluid">
-    <h1 class="h3 mb-2 text-gray-800">Danh sách ứng viên cho: <b> {{$listing->title}} </b></h1>
+
+    <div class="row">
+        <div class="col-md-7 col-12">  <h1 class="h3 mb-2 text-gray-800">Danh sách ứng viên cho: <b> {{$listing->title}} </b></h1></div>
+
+        <div class="col-md-5 col-12 d-flex justify-content-md-end" aria-label="Basic checkbox toggle button group">
+           <p class="mr-2">Chế độ hiển thị  </p>
+            <div  role="group" aria-label="Basic checkbox toggle button group">
+                <input  type="checkbox" autocomplete="off" id="checkbox1" checked>
+                <label  for="btncheck1">Đã thêm</label>
+
+                <input type="checkbox" class="btn-check ml-3" id="checkbox2" checked>
+                <label class="" for="btncheck2">Chưa thêm</label>
+            </div>
+        </div>
+    </div>
+
 
     <div class="dropdown-divider"></div>
 @if(Session::has('message'))
@@ -9,11 +25,13 @@
 
     <div class="row" >
     @foreach($users as $user)
-            <div class="col-lg-6 col-xl-4   mt-4">
+
                 @if($user->pivot->shortlisted)
-                    <div class="card bg border-bottom-success  pt-2 mt-4">
+                <div class="col-lg-6 col-xl-4  no mt-4">
+                    <div class="card bg border-bottom-success  pt-2 mt-4 div_box" >
                 @else
-                    <div class="card bg border-bottom-primary shadow  pt-2 mt-4">
+                <div class="col-lg-6 col-xl-4  yes mt-4">
+                    <div class="card bg border-bottom-primary shadow  pt-2 mt-4" >
                 @endif
                         <div class="card-body">
                             <div class="row ">
@@ -53,24 +71,18 @@
                                         @endif
                                     </form>
                                 </div>
-
                             </div>
                         </div>
                     </div>
+
             </div>
-
     @endforeach
-                    <div class="row  mt-5 ml-1" >
-                        <div class="col-12 ">
-                            {{$users->links('vendor.pagination.bootstrap-5')}}
-                        </div>
+
+    </div>
+</div>
+
+                <div class="row  mt-5 ml-1" >
+                    <div class="col-12 d-flex  justify-content-center">
+                        {{$users->links('vendor.pagination.bootstrap-5')}}
                     </div>
-
-
-</div>
-
-
-
-</div>
-
-
+                </div>

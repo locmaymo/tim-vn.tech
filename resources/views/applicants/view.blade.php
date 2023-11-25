@@ -127,6 +127,23 @@
         $('#summernote2').summernote();
         $( "#datepicker" ).datepicker();
     });
+
+    $(document).ready(function(){
+        $('#checkbox1').change(function(){
+            if(this.checked)
+                $('.no').fadeIn('fast');
+            else
+                $('.no').fadeOut('fast');
+
+        });
+        $('#checkbox2').change(function(){
+            if(this.checked)
+                $('.yes').fadeIn('fast');
+            else
+                $('.yes').fadeOut('fast');
+
+        });
+    });
 </script>
 
 {{----}}

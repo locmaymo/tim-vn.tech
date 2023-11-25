@@ -19,11 +19,12 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                     <tr>
-                        <th >STT</th>
+                        <th>STT</th>
                         <th>Bài đăng</th>
-                        <th>Tổng số ứng viên</th>
-                        <th>Số ứng viên chưa duyệt</th>
-                        <th>Ngày đăng</th>
+                        <th>Ngày đăng bài</th>
+                        <th>Sô ứng viên</th>
+                        <th>Chưa duyệt</th>
+                        <th>Đã duyệt</th>
                         <th>Xem ứng viên</th>
                     </tr>
                     </thead>
@@ -31,9 +32,10 @@
                     <tr>
                         <th>STT</th>
                         <th>Bài đăng</th>
-                        <th>Tổng số ứng viên</th>
-                        <th>Số ứng viên chưa duyệt</th>
-                        <th>Ngày đăng</th>
+                        <th>Ngày đăng bài</th>
+                        <th>Số ứng viên</th>
+                        <th>Chưa duyệt</th>
+                        <th>Đã duyệt</th>
                         <th>Xem ứng viên</th>
                     </tr>
                     </tfoot>
@@ -43,10 +45,11 @@
                             {{--                            auto increment td--}}
                             <td >{{$loop->iteration}}</td>
                             <td>{{$listing->title}}</td>
+                            <td>{{$listing->created_at->format('d-m-Y')}}</td>
                             <td>{{$listing->users_count}}</td>
                             <td>{{$listing->count}}</td>
-                            <td>{{$listing->created_at->format('d-m-Y')}}</td>
-                            <td><a href="{{route('applicants.view',$listing->slug)}}" class="btn btn-success">Xem ứng viên</a></td>
+                            <td>{{$listing->users_count - $listing->count}}</td>
+                            <td><a href="{{route('applicants.view',$listing->slug)}}" class="btn btn-success container-fluid">Xem ứng viên</a></td>
                             {{--                        modal--}}
                             <div class="modal fade" id="" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <form action=""  method="GET">@csrf

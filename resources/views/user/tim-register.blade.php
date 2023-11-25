@@ -8,14 +8,14 @@
                <div class="card shadow border-0" style="border-radius: 55px">
                    <div class="card-body">
                        <div class="row d-flex justify-content-center">
-                           <form action="{{route('store.employer')}}" method="post">@csrf
+                           <form action="{{route('store.tim')}}" method="post">@csrf
                                <div class="col-11 m-3 text-center">
                                    <h2 class="fw-bold">Đăng Ký Tim</h2>
 
                                </div>
                                <div class="col-11 m-3">
                                    <i class="fa-solid fa-user" style="color: rgba(114,0,0,0.48);position: absolute; right: 49px; margin-top: 11px"></i>
-                                   <input type="text" name="name" id="name" class="form-control shadow-none" placeholder="Công Ty" style="border-radius: 30px" value="">
+                                   <input type="text" name="name" id="name" class="form-control shadow-none" placeholder="Họ Tên" style="border-radius: 30px" value="">
                                    @if($errors->has('name'))
                                        <p class="text-danger">Bạn chưa nhập Tên</p>
                                    @endif
