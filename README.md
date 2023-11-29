@@ -36,4 +36,4 @@ Website được xây dựng với mục tiêu cung cấp một nền tảng cho
 
 ## Xem Website
 
-Bạn có thể xem website này tại <a href="https://tim-vn.tech/" target="_blank">Link tới website</a>
+Bạn có thể xem website này tại <a href="https://tim-vn.tech/" target="_blank">Tim-VN.Tech</a>
