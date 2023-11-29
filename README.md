@@ -56,6 +56,8 @@ Như vậy là đã sẵn sàng để chạy project Laravel sau khi clone từ 
 
 ### Bạn có thể tự tạo tài khoản đăng bài với dữ liệu của bạn nếu không có thể dùng dữ liệu dưới đây.
 
+<b>Lưu Lý:</b> tôi đã deploy sẵn trang web nên để tiết kiệm thời gian bạn có thể bỏ qua bước cài đặt. Và đến phần [Xem Website](#Xem-Website)
+
 Để import dữ liệu mẫu, bạn có thể sử dụng file SQL sau: [Link tới file SQL](laravel.sql)
 
 Một số tài khoản có sẵn trong dữ liệu mẫu để trải nghiệm:
@@ -73,7 +75,7 @@ Một số tài khoản có sẵn trong dữ liệu mẫu để trải nghiệm:
 
 ## Xem Website
 
-### Bạn có thể xem website này tại <a href="https://tim-vn.tech/" target="_blank">Tim-VN.Tech</a>
+### Bạn có thể xem website này trực tiếp tại đây: <a href="https://tim-vn.tech/" target="_blank">Tim-VN.Tech</a>
 
 Các Tài khoản có sẵn trên web online:
 - locmaymo@gmail.com|locloc11 (Tài khoản tuyển dụng đã đăng nhiều bài, đã thanh toán có nhiều ứng viên).
