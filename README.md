@@ -15,7 +15,7 @@ Website được xây dựng với mục tiêu cung cấp một nền tảng cho
 - Lưu trữ hồ sơ và thông tin cá nhân của người dùng.
 - Công cụ tạo CV thu hút, nổi bật.
 - Trợ lý AI thông minh giúp bạn lựa chọn nội dung.
-- 
+
 ## Cài đặt
 ### Hướng dẫn cài đặt và chạy project Laravel sau khi clone từ GitHub
 0. <b>Lưu Lý:</b> tôi đã deploy sẵn trang web nên để tiết kiệm thời gian bạn có thể bỏ qua bước cài đặt. Và đến phần [Xem Website](#Xem-Website)
