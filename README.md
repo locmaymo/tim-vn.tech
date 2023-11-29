@@ -8,7 +8,7 @@
 
 ## Cài đặt
 ### Hướng dẫn cài đặt và chạy project Laravel sau khi clone từ GitHub
-0. Lưu Lý: tôi đã deploy sẵn trang web nên để tiết kiệm thời gian bạn có thể bỏ qua bước cài đặt. Và đến phần [Xem Website](#-Xem-Website)
+0. Lưu Lý: tôi đã deploy sẵn trang web nên để tiết kiệm thời gian bạn có thể bỏ qua bước cài đặt. Và đến phần [Xem Website](##-Xem-Website)
 
 1. Cài Xampp
 2. Cài Composer
