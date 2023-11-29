@@ -6,6 +6,43 @@
 
 Đây là dự án đề tài tốt nghiệp - xây dựng một website tìm kiếm việc làm.
 
+## Cài đặt
+### Hướng dẫn cài đặt và chạy project Laravel sau khi clone từ GitHub
+0. Lưu Lý: tôi đã deploy sẵn trang web nên để tiết kiệm thời gian bạn có thể bỏ qua bước cài đặt. Và đến phần [Xem Website](#-Xem-Website)
+
+1. Cài Xampp
+2. Cài Composer
+3. Cài một IDE như PhpStorm hoặc VSCode
+
+### Di chuyển vào thư mục project và chạy các lệnh
+    composer install
+    composer dumpautoload -o
+Cấu hình tập tin .env
+Sao chép từ tập tin mẫu .env.example sang .env
+
+    cp .env.example .env
+    
+Tạo key cho ứng dụng
+
+    php artisan key:generate
+    
+Chỉnh sửa các thông số cấu hình trong tập tin .env cho phù hợp môi trường (APP_, DB_, Mật khẩu DB) ví dụ [Link tới file .env mẫu](File_env_cua_toi)
+
+Xóa và tạo lại cache
+
+    php artisan config:clear
+    php artisan config:cache
+
+Chạy Miragte tạo DB
+
+    php artisan migrate
+
+Chạy server development
+
+    php artisan serve
+    
+Như vậy là đã sẵn sàng để chạy project Laravel sau khi clone từ GitHub.
+
 ## Dữ Liệu Mẫu Và Các Phần Khác
 
 ### Bạn có thể tự tạo tài khoản đăng bài với dữ liệu của bạn nếu không có thể dùng dữ liệu dưới đây.
