@@ -6,6 +6,16 @@
 
 Đây là dự án đề tài tốt nghiệp - xây dựng một website tìm kiếm việc làm.
 
+## Mô Tả
+
+Website được xây dựng với mục tiêu cung cấp một nền tảng cho người tìm việc và nhà tuyển dụng. Có các tính năng chính sau:
+- Đăng ký và đăng nhập cho ứng viên và nhà tuyển dụng.
+- Tìm kiếm việc làm dựa trên mức lương, địa chỉ.
+- Đăng tin tuyển dụng cho nhà tuyển dụng.
+- Lưu trữ hồ sơ và thông tin cá nhân của người dùng.
+- Công cụ tạo CV thu hút, nổi bật.
+- Trợ lý AI thông minh giúp bạn lựa chọn nội dung.
+- 
 ## Cài đặt
 ### Hướng dẫn cài đặt và chạy project Laravel sau khi clone từ GitHub
 0. <b>Lưu Lý:</b> tôi đã deploy sẵn trang web nên để tiết kiệm thời gian bạn có thể bỏ qua bước cài đặt. Và đến phần [Xem Website](#Xem-Website)
@@ -60,16 +70,6 @@ Một số tài khoản có sẵn trong dữ liệu mẫu để trải nghiệm:
 - Tên chủ thẻ:NGUYEN VAN A
 - Ngày phát hành:07/15
 - Mật khẩu OTP:123456
-
-## Mô Tả
-
-Website được xây dựng với mục tiêu cung cấp một nền tảng cho người tìm việc và nhà tuyển dụng. Có các tính năng chính sau:
-- Đăng ký và đăng nhập cho ứng viên và nhà tuyển dụng.
-- Tìm kiếm việc làm dựa trên mức lương, địa chỉ.
-- Đăng tin tuyển dụng cho nhà tuyển dụng.
-- Lưu trữ hồ sơ và thông tin cá nhân của người dùng.
-- Công cụ tạo CV thu hút, nổi bật.
-- Trợ lý AI thông minh giúp bạn lựa chọn nội dung.
 
 ## Xem Website
 
