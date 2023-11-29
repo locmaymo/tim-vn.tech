@@ -8,12 +8,15 @@
 
 ## Dữ Liệu Mẫu Và Các Phần Khác
 Bạn có thể tự tạo tài khoản đăng bài với dữ liệu của bạn nếu không có thể dùng dữ liệu dưới đây.
+
 Để import dữ liệu mẫu, bạn có thể sử dụng file SQL sau: [Link tới file SQL](laravel.sql)
+
 Một số tài khoản có sẵn trong dữ liệu mẫu để trải nghiệm:
 - locmaymo@gmail.com|locloc11 (Tài khoản tuyển dụng đã đăng nhiều bài, đã thanh toán có nhiều ứng viên).
 - tutoihoc@gmail.com|locloc11 (Tài khoản tuyển dụng chưa thanh toán gói nào).
 - locmaymo12@gmail.com|jwiz@Nqt.K5P5W (Tài khoản ứng viên đã cập nhật đầy đủ thông tin, đã ứng tuyển nhiều vị trí).
 - 5qgmrksb5w@laafd.com|5qgmrksb5w@laafd.com (Tài khoản ứng viên chưa cập nhật đầy đủ thông tin, chưa được nhà tuyển dụng duyệt).
+- 
 Để thử chức năng thanh toán bạn cần sử dụng thẻ sau:
 - Ngân hàng: NCB
 - Số thẻ: 9704198526191432198
