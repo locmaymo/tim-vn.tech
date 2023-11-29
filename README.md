@@ -39,7 +39,7 @@ Website được xây dựng với mục tiêu cung cấp một nền tảng cho
 
 ### Bạn có thể xem website này tại <a href="https://tim-vn.tech/" target="_blank">Tim-VN.Tech</a>
 
-Các Tài khoản có sẵn:
+Các Tài khoản có sẵn trên web online:
 - locmaymo@gmail.com|locloc11 (Tài khoản tuyển dụng đã đăng nhiều bài, đã thanh toán có nhiều ứng viên).
 - rennguyen.ai@gmail.com|locloc11 (Tài Khoản tuyển dụng đã đăng bài, chưa thanh toán)
 - locmaymo2@gmail.com|locloc11 (Tài khoản ứng viên mới chưa cập nhật thông tin)
