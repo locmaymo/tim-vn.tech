@@ -154,6 +154,6 @@ class SubscriptionController extends Controller
         }
 
 
-        return redirect()->route('dashboard')->with('success','Thanh toán thành công tài khoản của bạn đã được nâng cấp');
+        return redirect()->route('dashboard')->with('message','Thanh toán thành công tài khoản của bạn đã được nâng cấp');
     }
 }
