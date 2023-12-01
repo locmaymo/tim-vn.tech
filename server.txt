@@ -49,3 +49,4 @@ server {
     server_name tim-vn.tech www.tim-vn.tech phamloc.live www.phamloc.live;
     return 404; # managed by Certbot
 }
+

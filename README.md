@@ -1,66 +1,86 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://tim-vn.tech/" target="_blank"><img src="https://raw.githubusercontent.com/locmaymo/tim-vn.tech/test/public/image/logo-tim.png" width="200" alt="Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# Đề Tài Tốt Nghiệp: Website Tìm Kiếm Việc Làm
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Đây là dự án đề tài tốt nghiệp - xây dựng một website tìm kiếm việc làm.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Mô Tả
 
-## Learning Laravel
+Website được xây dựng với mục tiêu cung cấp một nền tảng cho người tìm việc và nhà tuyển dụng. Có các tính năng chính sau:
+- Đăng ký và đăng nhập cho ứng viên và nhà tuyển dụng.
+- Tìm kiếm việc làm dựa trên mức lương, địa chỉ.
+- Đăng tin tuyển dụng cho nhà tuyển dụng.
+- Lưu trữ hồ sơ và thông tin cá nhân của người dùng.
+- Công cụ tạo CV thu hút, nổi bật.
+- Trợ lý AI thông minh giúp bạn lựa chọn nội dung.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Cài đặt
+### Hướng dẫn cài đặt và chạy project Laravel sau khi clone từ GitHub
+0. <b>Lưu Lý:</b> tôi đã deploy sẵn trang web nên để tiết kiệm thời gian bạn có thể bỏ qua bước cài đặt. Và đến phần [Xem Website](#Xem-Website)
+1. Cài Xampp
+2. Cài Composer
+3. Cài một IDE như PhpStorm hoặc VSCode
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Di chuyển vào thư mục project và chạy các lệnh
+    composer install
+    composer dumpautoload -o
+Cấu hình tập tin .env
+Sao chép từ tập tin mẫu .env.example sang .env
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+    cp .env.example .env
+    
+Tạo key cho ứng dụng
 
-## Laravel Sponsors
+    php artisan key:generate
+    
+Chỉnh sửa các thông số cấu hình trong tập tin .env cho phù hợp môi trường (APP_, DB_, Mật khẩu DB) ví dụ [Link tới file .env mẫu](File_env_cua_toi)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Xóa và tạo lại cache
 
-### Premium Partners
+    php artisan config:clear
+    php artisan config:cache
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Chạy Miragte tạo DB
 
-## Contributing
+    php artisan migrate
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Chạy server development
 
-## Code of Conduct
+    php artisan serve
+    
+Như vậy là đã sẵn sàng để chạy project Laravel sau khi clone từ GitHub.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Dữ Liệu Mẫu Và Các Phần Khác
 
-## Security Vulnerabilities
+### Bạn có thể tự tạo tài khoản đăng bài với dữ liệu của bạn nếu không có thể dùng dữ liệu dưới đây.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<b>Lưu Lý:</b> tôi đã deploy sẵn trang web nên để tiết kiệm thời gian bạn có thể bỏ qua bước cài đặt. Và đến phần [Xem Website](#Xem-Website)
 
-## License
+Để import dữ liệu mẫu, bạn có thể sử dụng file SQL sau: [Link tới file SQL](laravel.sql)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Một số tài khoản có sẵn trong dữ liệu mẫu để trải nghiệm:
+- locmaymo@gmail.com|locloc11 (Tài khoản tuyển dụng đã đăng nhiều bài, đã thanh toán có nhiều ứng viên).
+- tutoihoc@gmail.com|locloc11 (Tài khoản tuyển dụng chưa thanh toán gói nào).
+- locmaymo12@gmail.com|jwiz@Nqt.K5P5W (Tài khoản ứng viên đã cập nhật đầy đủ thông tin, đã ứng tuyển nhiều vị trí).
+- 5qgmrksb5w@laafd.com|5qgmrksb5w@laafd.com (Tài khoản ứng viên chưa cập nhật đầy đủ thông tin, chưa được nhà tuyển dụng duyệt).
+
+Để thử chức năng thanh toán bạn cần sử dụng thẻ sau:
+- Ngân hàng: NCB
+- Số thẻ: 9704198526191432198
+- Tên chủ thẻ:NGUYEN VAN A
+- Ngày phát hành:07/15
+- Mật khẩu OTP:123456
+
+## Xem Website
+
+### Bạn có thể xem website này trực tiếp tại đây: <a href="https://tim-vn.tech/" target="_blank">Tim-VN.Tech</a>
+
+Các Tài khoản có sẵn trên web online:
+- locmaymo@gmail.com|locloc11 (Tài khoản tuyển dụng đã đăng nhiều bài, đã thanh toán có nhiều ứng viên).
+- rennguyen.ai@gmail.com|locloc11 (Tài Khoản tuyển dụng đã đăng bài, chưa thanh toán)
+- locmaymo2@gmail.com|locloc11 (Tài khoản ứng viên mới chưa cập nhật thông tin)
+- 1oeab8onmp@vjuum.com|locloc11 (Một tài khoản ứng viên khác)
+
+
