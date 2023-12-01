@@ -7,6 +7,12 @@ use Illuminate\Support\Facades\Http;
 
 class SuggestController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(['auth']);
+    }
+
     public function suggest(Request $request)
     {
 //        sử dụng openai để đưa ra đề xuất viết nội dung cv cho người dùng với các trường người dùng nhập vào   sử dụng openai api để tạo một form điền vào và gợi ý cho ứng viên một mẫu cv với các trường nhập vào gồm

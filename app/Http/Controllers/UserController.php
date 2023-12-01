@@ -12,6 +12,11 @@ use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
+//    hàm khởi tạo để xác định các route cần phải đăng nhập
+    public function __construct()
+    {
+        $this->middleware(['auth'])->except(['login', 'register', 'storeTim', 'storeEmployer', 'createTim', 'createEmployer', 'postLogin']);
+    }
     //    hàm này để hiển thị form đăng nhập
     public function login()
     {
@@ -189,4 +194,3 @@ class UserController extends Controller
 
 
 }
-
