@@ -37,7 +37,7 @@
                                     @endif
                                 </div>
                                 <div class="col-11 m-3">
-                                    <input type="checkbox" style="margin-left: 4px"  onclick="show1()"> Hiển Thị
+                                    <input type="checkbox" style="margin-left: 4px"  onclick="show()"> Hiển Thị
                                 </div>
                                 <div class="col-11 m-3 d-flex justify-content-center">
                                     <button type="submit" class="btn btn-primary container-fluid" style="border-radius: 40px" >Đăng Ký</button>
@@ -48,6 +48,21 @@
                 </div>
             </div>
         </div>
-
     </div>
+<script>
+    function show() {
+        var x = document.getElementById("password");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+        var y = document.getElementById("re_password");
+        if (y.type === "password") {
+            y.type = "text";
+        } else {
+            y.type = "password";
+        }
+    }
+</script>
 @endsection
