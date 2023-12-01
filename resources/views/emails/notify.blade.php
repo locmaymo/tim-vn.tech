@@ -5,9 +5,10 @@
 <p>Gói thành viên:
     @if($plan == 'monthly')
         <b>Gói tháng</b>
+        <br>Ngày hết hạn: <b>{{ $billingEnds }}</b>
     @elseif($plan == 'yearly')
         <b>Gói năm</b>
-        <br>Ngày hết hạn: <b>{{ $billingEnds->format('d-m-Y') }}</b></p>
+        <br>Ngày hết hạn: <b>{{ $billingEnds }}</b>
     @endif
 <x-mail::button :url="'https://tim-vn.tech/dashboard'">
 Truy cập bảng điều khiển
